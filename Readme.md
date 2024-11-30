@@ -38,22 +38,9 @@ Make sure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone https://github.com/Rounak2001/Todo
+   cd todo_app
 
-Here’s the complete **setup section** with the additional content included, written in Markdown format:
-
----
-
-```markdown
-## Setup Instructions
-
-1. **Clone the Repository**
-   Clone the project from the repository:
-   ```bash
-   git clone <repository_url>
-   cd <project_directory>
-   ```
 
 2. **Create and Activate a Virtual Environment**
    Set up a virtual environment to isolate project dependencies:
@@ -115,11 +102,5 @@ The following endpoints are available:
 - **GET /tasks/<id>/**: Retrieve a specific task by ID.
 - **PUT /tasks/<id>/**: Update a specific task by ID.
 - **DELETE /tasks/<id>/**: Delete a specific task by ID.
-
-Use the test suite or Postman to verify each endpoint's functionality.
-
-```
-
----
 
 
