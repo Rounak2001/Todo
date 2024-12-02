@@ -39,7 +39,7 @@ Make sure you have the following installed:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/Rounak2001/Todo
-   cd todo_app
+   cd Todo
 
 
 2. **Create and Activate a Virtual Environment**
