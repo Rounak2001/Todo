@@ -97,6 +97,7 @@ The following endpoints are available:
 ### **Task List**
 - **GET /tasks/**: Retrieve a list of all tasks.
 - **POST /tasks/**: Create a new task.
+- **DELETE /tasks**: Delete all the Todos
 
 ### **Task Detail**
 - **GET /tasks/<id>/**: Retrieve a specific task by ID.
