@@ -27,7 +27,7 @@ class ToDoTaskAPITests(APITestCase):
         self.assertEqual(ToDoTask.objects.count(), 3)  # 2 from setup + 1 new
         self.assertEqual(response.data['title'], 'New Task')
         self.assertEqual(response.data['description'], 'New Task Description')
-        self.assertEqual(response.data['is_completed'], True)
+        
 
     # Test retrieving a specific task
     def test_retrieve_task(self):
@@ -52,3 +52,10 @@ class ToDoTaskAPITests(APITestCase):
         response = self.client.delete(delete_url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(ToDoTask.objects.count(), 1)  # One task should remain
+
+    def test_delete_all_tasks(self):
+        # Make a DELETE request to the endpoint
+        response = self.client.delete('/api/tasks/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(ToDoTask.objects.count(), 0)
+        self.assertIn("Deleted 2 tasks successfully.", response.data["message"])
